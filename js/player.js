@@ -28,7 +28,7 @@ Player = {
       Player.loadModel();
     };
 
-    textureLoader.load("./texture.jpg", textureCallback);
+    textureLoader.load("./object/texture.jpg", textureCallback);
 
     Player.renderer = new THREE.WebGLRenderer();
 
@@ -54,7 +54,7 @@ Player = {
       Player.scene.add(object);
     };
 
-    objectLoader.load("./object.obj", objectCallback);
+    objectLoader.load("./object/object.obj", objectCallback);
   },
 
   animate: function() {
