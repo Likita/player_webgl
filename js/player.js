@@ -42,7 +42,6 @@ Player = {
 
   loadModel: function() {
     var objectCallback, objectLoader;
-    THREE.OBJLoader.crossOrigin = "anonymous"
     objectLoader = new THREE.OBJLoader();
 
     objectCallback = function(object) {
