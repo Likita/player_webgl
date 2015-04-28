@@ -4,8 +4,6 @@ window.onload = function() {
 
 Player = {
   init: function() {
-    var textureCallback, textureLoader;
-
     Player.container = document.getElementById("webgl-player");
 
     Player.size = {
@@ -23,12 +21,10 @@ Player = {
 
     textureLoader = new THREE.TextureLoader();
 
-    textureCallback = function(texture) {
+    textureLoader.load("./object/texture.jpg", function(texture) {
       Player.texture = texture;
       Player.loadModel();
-    };
-
-    textureLoader.load("./object/texture.jpg", textureCallback);
+    });
 
     Player.renderer = new THREE.WebGLRenderer();
 
@@ -41,19 +37,16 @@ Player = {
   },
 
   loadModel: function() {
-    var objectCallback, objectLoader;
     objectLoader = new THREE.OBJLoader();
 
-    objectCallback = function(object) {
+    objectLoader.load("./object/object.obj", function(object) {
       object.traverse(function(child) {
         if (child instanceof THREE.Mesh) {
-          return child.material.map = Player.texture;
+          child.material.map = Player.texture;
         }
       });
       Player.scene.add(object);
-    };
-
-    objectLoader.load("./object/object.obj", objectCallback);
+    });
   },
 
   animate: function() {
