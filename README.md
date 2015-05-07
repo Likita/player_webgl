@@ -7,7 +7,7 @@
 Вам понадобится локальный сервер для загрузки .obj файла модели.
 
 Демо
-http://vasilika-klimova.myjino.ru/player/player.html
+http://vasilika-klimova.myjino.ru/player
 
 ============================================================
 
@@ -18,4 +18,4 @@ This player shows 3D model of turtle (object.obj + texture.jpg) using WebGL libr
 You need in local server to load .obj file model.
 
 Demo
-http://vasilika-klimova.myjino.ru/player/player.html
+http://vasilika-klimova.myjino.ru/player
